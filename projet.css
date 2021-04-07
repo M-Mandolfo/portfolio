@@ -1,0 +1,14 @@
+.projet{
+    background-image: url(images/torii.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.card-title{
+  color: rgb(107, 24, 24);
+}
+
+.card-text{
+  color: black;
+  text-align: center;
+}
