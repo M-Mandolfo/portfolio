@@ -2,42 +2,30 @@
     background-image: url(images/torii.png);
     background-repeat: no-repeat;
     background-size: cover;
-  }
-
-@media only screen and (max-width: 900px) {
-  .projet {
-    width: 100%;
-  }
-}
-  
-@media only screen and (max-width: 400px) {
-  .projet {
-      width: 100%;
-      }
 }
 
-  .grid-container {
+.grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 600px 220px 220px;
     grid-gap: 1px;
     padding: 5px;
-  }
+}
   
-  .grid-container > div {
+.grid-container > div {
     text-align: center;
     padding: 10px 0;
     font-size: 18px;
   }
 
-  .card {
+.card {
     border: 2px solid #e7e7e7a1; 
     border-radius: 6px;
     width: 350px;
     height:530px;
     margin-left: 140px;
     background-color: #b8870b69;
-    }
+}
 
 @media only screen and (max-width: 900px) {
   .grid-container {
@@ -60,3 +48,14 @@
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .projet {
+    width: 100%;
+  }
+}
+  
+@media only screen and (max-width: 400px) {
+  .projet {
+      width: 100%;
+      }
+}

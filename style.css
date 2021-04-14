@@ -29,10 +29,10 @@ a{
 }
 
 a:hover{
-  color: goldenrod;
+  color: goldenrod; 
 }
 
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 800px){
     #menuToggle{
   display: block;
   position: relative;
@@ -71,7 +71,7 @@ a:hover{
   margin-bottom: 5px;
   position: relative;
   
-  background: #000000;
+  background: #c0950a;
   border-radius: 3px;
   
   z-index: 1;
@@ -94,7 +94,7 @@ a:hover{
     #menuToggle input:checked ~ span{
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: #d8d511;
     }
 
     /*But let's hide the middle one.*/
@@ -111,9 +111,9 @@ a:hover{
     /*Make this absolute positioned at the top left of the screen*/
     #menu{
   position: absolute;
-  margin: -50px 0 0 -180px;
+  margin: -50px 0 0 -200px;
   padding: 50px;
-  padding-top: 100px;
+  padding-top: 60px;
   display:flex;
   flex-direction: column;
   background-color:goldenrod; 
@@ -125,9 +125,9 @@ a:hover{
   transform: translate(100%, 0);
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-    }
+  }
 
-    #menu li{
+  #menu li{
   padding: 10px 0;
   font-size: 18px;
         }
@@ -209,38 +209,39 @@ header{
   font-size: 16px;
 }
 
-.grid-container2 {
-  display: grid;
-  grid-template-columns: 150px 620px 150px 150px 400px;
-  grid-template-rows: 250px;
-  grid-gap: 1px;
-  grid-auto-rows: minmax(15px, auto);
-  padding: 10px;
-}
-
-.grid-container2 > div {
-  text-align: center;
-  padding: 5px 0;
-  font-size: 16px;
-}
-
 .me{
   border-radius: 50%;
   width: 250px;
 }
 
-@media only screen and(max-width: 900px){
+.grid-container2 {
+  display: grid;
+  margin: auto;
+  max-width: 1140px;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: 250px;
+  grid-gap: 15px;
+  grid-auto-rows: minmax(15px, auto);
+  padding: 10px;
+}
   
-  .grid-container, .grid-container2{
-    grid-template-columns: repeat(3, 1fr);
-  }   
+.grid-container2 p {
+  grid-column: span 8;
+}
+  
+.grid-container2 > div {
+  grid-column: span 4;
 }
 
-@media only screen and(max-width: 450px){
-  
-  .grid-container, .grid-container2{
-    grid-template-columns: repeat(1, 1fr);
-  }   
+@media only screen and (max-width: 450px) {
+    .grid-container2 p {
+      grid-column: span 12;
+      }
+      
+      .grid-container2 > div {
+      grid-column: span 12;
+      }
+  }
 }
 /* Fin first section */
 
@@ -366,9 +367,7 @@ h3.no-span:before, h3.no-span:after {
 	color:#ffffff;
 	color:rgba(0, 0, 0, 0.4);
 }
-
 /* Fin skillbar */
-
 
 /* Partie Réalisations */
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
@@ -515,42 +514,42 @@ h3.no-span:before, h3.no-span:after {
   }
 
   .card:hover,
-.card:focus-within {
+  .card:focus-within {
     align-items: center;
   }
 
   .card:hover:before,
-.card:focus-within:before {
+  .card:focus-within:before {
     transform: translateY(-4%);
   }
 
   .card:hover:after,
-.card:focus-within:after {
+  .card:focus-within:after {
     transform: translateY(-50%);
   }
 
   .card:hover .content,
-.card:focus-within .content {
+  .card:focus-within .content {
     transform: translateY(0);
   }
 
   .card:hover .content > *:not(.title),
-.card:focus-within .content > *:not(.title) {
+  .card:focus-within .content > *:not(.title) {
     opacity: 1;
     transform: translateY(0);
     transition-delay: calc(var(--d) / 8);
   }
 
   .card:focus-within:before, .card:focus-within:after,
-.card:focus-within .content,
-.card:focus-within .content > *:not(.title) {
+  .card:focus-within .content,
+  .card:focus-within .content > *:not(.title) {
     transition-duration: 0s;
   }
 }
 /* Fin Réalisations */
 
 /* Footer */
- hr {
+hr {
     max-width: 90px;
     border-color: #B8860B;
     border: 4px;
@@ -568,12 +567,11 @@ h3.no-span:before, h3.no-span:after {
   height: 550px;
 }
 
-.section-header {
+.section-header, .degrade {
   text-align: center;
   background: -webkit-gradient(linear, left top, left bottom, from(#FFEBCD), to(#DAA520));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family:'Sedgwick Ave';
 }
 
 .contact-wrapper {
@@ -603,15 +601,16 @@ h3.no-span:before, h3.no-span:after {
 }
 
 .send-button {
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-left: 15px;
   height: 34px;
-  width: 400px;
+  width: 360px;
   overflow: hidden;
   transition: all .2s ease-in-out;
 }
 
 .button {
-  width: 300px;
+  width: 350px;
   height: 34px;
   transition: all .2s ease-in-out;
 }
@@ -738,8 +737,10 @@ h3.no-span:before, h3.no-span:after {
   text-align: center;
 }
 
+
 /* Begin Media Queries*/
 @media screen and (max-width: 900px) {
+
   .direct-contact-container, .form-horizontal {
     float: none;
     margin: 10px auto;
@@ -760,23 +761,24 @@ h3.no-span:before, h3.no-span:after {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 450px) {
+
   .contact-container, .form-wrapper {
     float: none;
     margin: 0 auto;
   }  
   .form-control, textarea {
-    max-width: 340px;
+    max-width: 300px;
     margin: 0 auto;
   }
   
   .name, .email, textarea {
-    width: 280px;
+    width: 200px;
   } 
   
   .contact-container {
     margin-top: 60px;
-    max-width: 280px;
+    max-width: 200px;
   }  
   .social-media-list {
     left: 0;
@@ -796,7 +798,8 @@ h3.no-span:before, h3.no-span:after {
 
 @media screen and (max-width: 900px) {
   .send-button {
-    width: 99%;
+    width: 98%;
   }
 }
+
 /* Fin Footer */
