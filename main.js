@@ -1,10 +1,3 @@
-// Navbar
-var loader = setInterval(function () {
-    if(document.readyState !== "complete") return;
-    clearInterval(loader);
-  
-}, 300);
-
 // Header
 VANTA.BIRDS({
   el: "#birds",
@@ -15,9 +8,11 @@ VANTA.BIRDS({
   minWidth: 200.00,
   scale: 1.00,
   scaleMobile: 1.00,
+  backgroundAlpha: 0.00,
   color1: 0xdaa520,
   color2: 0x0
 });
+
 
 // Skill bar
 var skillbars = document.querySelectorAll('.skillbar-bar');
