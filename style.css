@@ -1,3 +1,7 @@
+body{
+  overflow-x: hidden;
+}
+
 /* Header menu */
 .nav {
     height: 60px;
@@ -33,7 +37,7 @@ a:hover{
 }
 
 @media only screen and (max-width: 800px){
-    #menuToggle{
+  #menuToggle{
   display: block;
   position: relative;
   top: 25px;
@@ -44,12 +48,12 @@ a:hover{
   user-select: none;
     }
 
-    #menuToggle a{
+  #menuToggle a{
   text-decoration: none;
   transition: color 0.3s ease;
     }
 
-    #menuToggle input{
+  #menuToggle input{
   display: block;
   width: 40px;
   height: 32px;
@@ -68,7 +72,7 @@ a:hover{
   display: block;
   width: 33px;
   height: 4px;
-  margin-bottom: 5px;
+  margin-bottom: 5px; 
   position: relative;
   
   background: #c0950a;
@@ -196,6 +200,8 @@ header{
 /* First Section */
 .grid-container {
   display: grid;
+  max-width: 1140px;
+  margin: auto;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: 80px;
   grid-gap: 1px;
@@ -219,7 +225,7 @@ header{
   margin: auto;
   max-width: 1140px;
   grid-template-columns: repeat(12,1fr);
-  grid-template-rows: 250px;
+  grid-template-rows: 200px;
   grid-gap: 15px;
   grid-auto-rows: minmax(15px, auto);
   padding: 10px;
@@ -236,12 +242,11 @@ header{
 @media only screen and (max-width: 450px) {
     .grid-container2 p {
       grid-column: span 12;
-      }
+    }
       
-      .grid-container2 > div {
+    .grid-container2 > div {
       grid-column: span 12;
-      }
-  }
+    }
 }
 /* Fin first section */
 
@@ -363,7 +368,7 @@ h3.no-span:before, h3.no-span:after {
 	top:0;
 	font-size:12px;
 	height:35px;
-	line-height:35px;
+	line-height:30px;
 	color:#ffffff;
 	color:rgba(0, 0, 0, 0.4);
 }
@@ -584,7 +589,7 @@ hr {
 /* Begin Left Contact Page */
 .form-horizontal {
   float: left;
-  max-width: 800px;
+  max-width: 600px;
   font-family: 'Lato';
   font-weight: 400;
 }
@@ -739,67 +744,54 @@ hr {
 
 
 /* Begin Media Queries*/
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 890px) {
 
-  .direct-contact-container, .form-horizontal {
+  #contact-form, .form-horizontal {
     float: none;
     margin: 10px auto;
   }  
-  .direct-contact-container {
+
+  .send-button{
+    width: 100%;
+  }
+  
+  .form-horizontal {
     margin-top: 60px;
-    max-width: 900px;
-  }    
+    max-width: 500px;
+  }  
+
   .social-media-list li {
-    height: 60px;
-    width: 60px;
-    line-height: 60px;
-  }
-  .social-media-list li:after {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-  }
+    width: 80%; 
 }
 
 @media screen and (max-width: 450px) {
 
-  .contact-container, .form-wrapper {
+  .contact-container, .contact-wrapper {
     float: none;
     margin: 0 auto;
-  }  
+  } 
+
   .form-control, textarea {
-    max-width: 300px;
+    max-width: 250px;
     margin: 0 auto;
   }
-  
-  .name, .email, textarea {
-    width: 200px;
-  } 
-  
-  .contact-container {
-    margin-top: 60px;
-    max-width: 200px;
+
+  .send-button{
+    width: 80%;
+  }
+
+  #contact-form {
+    max-width: 250px;
   }  
-  .social-media-list {
-    left: 0;
-  }
+  
   .social-media-list li {
-    height: 55px;
-    width: 55px;
-    line-height: 55px;
-    font-size: 2rem;
+    height: 20px;
+    width: 20px;
   }
+
   .social-media-list li:after {
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
+    width: 20px;
+    height: 20px;
   }
 }
-
-@media screen and (max-width: 900px) {
-  .send-button {
-    width: 98%;
-  }
-}
-
 /* Fin Footer */
