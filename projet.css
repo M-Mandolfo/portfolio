@@ -1,5 +1,25 @@
-.vdj{
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+
+body{
   overflow-x: hidden;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-image: linear-gradient(
+    to left,
+    #1b040a,
+    #FFF8DC,
+    #d4a01de0); 
+  padding: 10px; 
+}
+
+.vdj{
   background-image: url(images/torii.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,20 +28,19 @@
 .projet{
   max-width: 1140px;
   margin: auto;
-  padding: 20px;
+  padding-top: 25px;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 550px 150px 300px;
-    grid-gap: 15px;
+    grid-template-rows: 600px 200px 250px;
+    grid-gap: 20px;
     grid-auto-rows: minmax(15px, auto);
 }
   
 .grid-container > div {
     text-align: center;
-    padding: 10px 0;
     font-size: 16px;
 }
 
@@ -32,7 +51,7 @@
   height: 500px;
   padding: 5px;
   background-color: #b8870b69;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .card-text{
@@ -70,6 +89,15 @@ a:hover{
   color: black;
 }
 
+.police{
+  font-family: 'Sedgwick Ave', cursive;
+  padding-top: 20px;
+}
+
+.police1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 @media only screen and (min-width: 1340px) {
   .projet{
     max-width: 1440px;
@@ -78,7 +106,7 @@ a:hover{
 }
 
 @media only screen and (max-width: 1140px) {
-  .grid-container, .grid-container2 {
+  .grid-container {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   margin: auto;
@@ -86,19 +114,104 @@ a:hover{
 }
 
 @media only screen and (max-width: 900px) {
-  .grid-container, .grid-container2 {
-  grid-template-columns: repeat(3, 1fr);
+  .grid-container {
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
   }
 }
 
-@media only screen and (max-width: 500px) { 
-.grid-container, .grid-container2 {
+@media only screen and (max-width: 750px) { 
+  .grid-container{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  
+  .nav{
+      width: 100%;
+  }
+  
+  .card{
+      margin: auto;
+      width: 70%;
+      order: 1;
+  }
+  
+  .logo{
+      order: 2;
+      padding-bottom: 30px;
+      padding-top: 30px;
+  }
+  
+  .charte{
+      order: 3;
+      padding-bottom: 30px;
+  }
+  
+  .fonts{
+      order: 4;
+      padding-bottom: 30px;
+  }
+  
+  .ordi{
+      order: 5;
+      padding-bottom: 30px;
+  }
+  
+  .mobile{
+      order: 6;
+      padding-bottom: 30px;
+  }
+  
+  .lien{
+      order: 7;
+      padding-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 520px) { 
+.grid-container{
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  }
+
+  .nav{
+    width: 100%;
   }
 
   .card{
-    margin-left: 10px;
+    margin: auto;
+    width: 80%;
+    order: 1;
+  }
+
+  .logo{
+    order: 2;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+
+ .charte{
+    order: 3;
+    padding-bottom: 30px;
+  }
+
+  .fonts{
+    order: 4;
+    padding-bottom: 30px;
+  }
+
+.ordi{
+    order: 5;
+    padding-bottom: 30px;
+  }
+
+  .mobile{
+    order: 6;
+    padding-bottom: 30px;
+  }
+
+  .lien{
+    order: 7;
+    padding-bottom: 30px;
   }
 }

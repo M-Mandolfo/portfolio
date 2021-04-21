@@ -1,3 +1,7 @@
+html{
+  overflow-x: hidden;
+}
+
 body{
   overflow-x: hidden;
 }
@@ -27,12 +31,12 @@ body{
   margin: 5px 10px; 
 }
 
-a{
+.menu1{
     text-decoration: none;
     color: white;
 }
 
-a:hover{
+.menu1:hover{
   color: goldenrod; 
 }
 
@@ -40,18 +44,17 @@ a:hover{
   #menuToggle{
   display: block;
   position: relative;
-  top: 25px;
-  left: 25px;
+  left: 13px;
   
   z-index: 1;
 
   user-select: none;
-    }
+  }
 
   #menuToggle a{
   text-decoration: none;
   transition: color 0.3s ease;
-    }
+  }
 
   #menuToggle input{
   display: block;
@@ -65,7 +68,7 @@ a:hover{
   
   opacity: 0; /* hide this */
   z-index: 1; /* and place it over the hamburger */
-    }
+}
 
     /*Just a quick hamburger */
   #menuToggle span{
@@ -84,39 +87,39 @@ a:hover{
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
-    }
+}
 
     #menuToggle span:first-child{
   transform-origin: 0% 0%;
     }
 
-    #menuToggle span:nth-last-child(2){
+  #menuToggle span:nth-last-child(2){
   transform-origin: 0% 100%;
-    }
+  }
 
-    /* Transform all the slices of hamburger into a crossmark.*/
-    #menuToggle input:checked ~ span{
+  /* Transform all the slices of hamburger into a crossmark.*/
+  #menuToggle input:checked ~ span{
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #d8d511;
-    }
+  }
 
-    /*But let's hide the middle one.*/
-    #menuToggle input:checked ~ span:nth-last-child(3){
+  /*But let's hide the middle one.*/
+  #menuToggle input:checked ~ span:nth-last-child(3){
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
-    }
+  }
 
     /*Ohyeah and the last one should go the other direction*/
-    #menuToggle input:checked ~ span:nth-last-child(2){
+  #menuToggle input:checked ~ span:nth-last-child(2){
   transform: rotate(-45deg) translate(0, -1px);
-    }
+  }
 
     /*Make this absolute positioned at the top left of the screen*/
-    #menu{
+  #menu{
   position: absolute;
-  margin: -50px 0 0 -200px;
-  padding: 50px;
+  margin: -50px 0 0 -120px;
+  padding: 20px;
   padding-top: 60px;
   display:flex;
   flex-direction: column;
@@ -124,7 +127,8 @@ a:hover{
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
-  
+  visibility: hidden;
+  opacity: 0;
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
   
@@ -133,13 +137,15 @@ a:hover{
 
   #menu li{
   padding: 10px 0;
-  font-size: 18px;
-        }
+  font-size: 16px;
+  }
 
-    /* And let's slide it in from the left*/
-    #menuToggle input:checked ~ ul{
+/* And let's slide it in from the left*/
+  #menuToggle input:checked ~ ul{
   transform: none;
-    }   
+  visibility: visible;
+  opacity: 1;
+  }   
 }
 
 .checkbox{
@@ -149,18 +155,22 @@ a:hover{
   height: 32px;
   position: absolute;
   cursor: pointer;
-  z-index: 2;
-  }
+  z-index: 1;
+} 
 
 header{
   height: 900px;
   text-align: center;
   background-image: url(images/tokyo.jpg);
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
 }
 
-#about, #skills{
-  margin: 100px 0 200px 0;
+#skills{
+  margin: 30px 0 150px 0;
+}
+
+#about{
+  margin: 80px 0 200px 0;
 }
 
 @media only screen and (max-width: 450px) {
@@ -171,7 +181,7 @@ header{
 /* Fin header menu */
 
 .separateur{
-    margin: 150px;
+    margin: 100px;
 }
 
 .separateur2{
@@ -186,12 +196,12 @@ header{
 .neon {
   color: #f0e8a6;
   text-shadow:
-  0 0 10px #B8860B,
-  0 0 30px #B8860B,
-  0 0 60px #B8860B,
-  0 0 90px #dbac10,
-  0 0 120px #d6a812,
-  0 0 150px #DAA520,
+  0 0 10px #ffcc99,
+  0 0 30px #ffcc99,
+  0 0 60px #ffcc99,
+  0 0 90px #ffcc99,
+  0 0 120px #47290a,
+  0 0 150px #a77d14,
   0 0 180px #B8860B,
   0 0 200px #B8860B;
   top: 70%;
@@ -226,8 +236,6 @@ header{
   max-width: 1140px;
   grid-template-columns: repeat(12,1fr);
   grid-template-rows: 200px;
-  grid-gap: 15px;
-  grid-auto-rows: minmax(15px, auto);
   padding: 10px;
 }
   
@@ -250,14 +258,6 @@ header{
 }
 /* Fin first section */
 
-.degrade {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FFEBCD), to(#DAA520));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  top: 50%;
-  font-family:'Sedgwick Ave';
-}
-
 h2, h3, h4{
   text-align: center;
 }
@@ -278,7 +278,7 @@ h2.no-span {
     position: relative;
     top: 0.5em;
     width: 50%;
-    }
+}
 
 h3.no-span {
    display: table;
@@ -303,6 +303,7 @@ h3.no-span:before, h3.no-span:after {
 	position:relative;
 	display:block;
 	margin-bottom:15px;
+  margin-left: 60px;
 	width:80%;
 	background:#eee;
 	height:35px;
@@ -372,6 +373,13 @@ h3.no-span:before, h3.no-span:after {
 	color:#ffffff;
 	color:rgba(0, 0, 0, 0.4);
 }
+
+@media only screen and (max-width: 500px) {
+  .col-lg-3{
+    padding: 20px;
+  }
+}
+
 /* Fin skillbar */
 
 /* Partie Réalisations */
@@ -487,7 +495,6 @@ h3.no-span:before, h3.no-span:after {
 }
 
 .btn {
-  cursor: pointer;
   margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
   font-size: 0.65rem;
@@ -569,7 +576,7 @@ hr {
   width: 100%;
   background-color: #000;
   overflow: hidden;
-  height: 550px;
+  padding: 40px;
 }
 
 .section-header, .degrade {
@@ -577,6 +584,7 @@ hr {
   background: -webkit-gradient(linear, left top, left bottom, from(#FFEBCD), to(#DAA520));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: 'Sedgwick Ave';
 }
 
 .contact-wrapper {
@@ -614,12 +622,6 @@ hr {
   transition: all .2s ease-in-out;
 }
 
-.button {
-  width: 350px;
-  height: 34px;
-  transition: all .2s ease-in-out;
-}
-
 .send-text {
   display: block;
   margin-top: 10px;
@@ -627,12 +629,8 @@ hr {
   letter-spacing: 2px;
 }
 
-.button:hover {
-  transform: translate3d(0px, -29px, 0px);
-}
-
 /* Begin Right Contact Page */
-.contact-container {
+.contact {
   max-width: 400px;
   float: right;
   margin-top: 5px;
@@ -641,8 +639,6 @@ hr {
 /* Location, Phone, Email Section */
 .contact-list {
   list-style-type: none;
-  margin-left: 30px;
-  padding-right: 20px;
 }
 
 .list-item {
@@ -651,8 +647,7 @@ hr {
 }
 
 .contact-text {
-  font: 300 18px 'Lato', sans-serif;
-  letter-spacing: 1.9px;
+  font: 300 16px 'Lato', sans-serif;
   color: #FFEBCD;
 }
 
@@ -735,16 +730,28 @@ hr {
   color: #000;
 }
 
-.copyright {
+.copyright, .ml {
   font: 200 14px 'Oswald', sans-serif;
   color: #FFEBCD;
   letter-spacing: 1px;
-  text-align: center;
+  text-align: center; 
+  text-decoration: none;
+  padding: 5px;
 }
 
+.ml:hover{
+  color: #c0950a;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
 
 /* Begin Media Queries*/
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 830px) {
 
   #contact-form, .form-horizontal {
     float: none;
@@ -756,17 +763,19 @@ hr {
   }
   
   .form-horizontal {
-    margin-top: 60px;
-    max-width: 500px;
+    margin-top: 40px;
+    max-width: 300px;
   }  
 
-  .social-media-list li {
-    width: 80%; 
+.contact {
+    float: none;
+    margin: 10px auto; 
+    padding: 20px;
 }
 
 @media screen and (max-width: 450px) {
 
-  .contact-container, .contact-wrapper {
+  .contact, .contact-wrapper {
     float: none;
     margin: 0 auto;
   } 
@@ -777,7 +786,7 @@ hr {
   }
 
   .send-button{
-    width: 80%;
+    width: 90%;
   }
 
   #contact-form {
@@ -788,10 +797,16 @@ hr {
     height: 20px;
     width: 20px;
   }
-
   .social-media-list li:after {
     width: 20px;
     height: 20px;
   }
-}
+
+  .contact-list{
+    font-size: 10px; 
+    padding: 0;
+    margin: 0;
+    padding-top: 40px;
+  }
+} 
 /* Fin Footer */
