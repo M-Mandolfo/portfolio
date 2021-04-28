@@ -158,7 +158,7 @@ body{
   z-index: 1;
 } 
 
-header{
+#birds{
   height: 900px;
   text-align: center;
   background-image: url(images/tokyo.jpg);
@@ -241,20 +241,23 @@ header{
   
 .grid-container2 p {
   grid-column: span 8;
+  max-width: 600px;
+  text-align: center;
 }
   
 .grid-container2 > div {
   grid-column: span 4;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 700px) {
     .grid-container2 p {
       grid-column: span 12;
     }
       
     .grid-container2 > div {
       grid-column: span 12;
-    }
+      padding: 30px;
+  }
 }
 /* Fin first section */
 
@@ -374,7 +377,7 @@ h3.no-span:before, h3.no-span:after {
 	color:rgba(0, 0, 0, 0.4);
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   .col-lg-3{
     padding: 20px;
   }

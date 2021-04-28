@@ -1,0 +1,80 @@
+html{
+    overflow-x: hidden;
+}
+  
+  body{
+    overflow-x: hidden;
+}
+
+/* Header */
+header{
+    height: 400px;
+    background-image: linear-gradient(#FFEBCD, #DAA520);  
+}
+
+.degrade {
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFEBCD), to(#DAA520));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 15px 15px;
+}
+
+.nav {
+    height: 50px;
+    width: 100%;
+    background-image: linear-gradient(
+      to left,
+      #1b040a,
+      #FFF8DC,
+      #d4a01de0); 
+    padding: 10px; 
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+  
+a:hover{
+    color: black;
+}
+/* Fin Header */
+
+/* Corps page */
+section{
+    max-width: 940px;
+    margin: auto;
+}
+
+.separateur{
+    margin: 40px;
+}
+
+.lien1{
+    color: goldenrod;
+}
+
+h5{
+    color: rgba(0, 0, 0, 0.603);
+    font-weight: 400;
+    padding: 10px 10px;
+}
+
+/* Fin corps page */
+
+/* Footer */
+footer{
+    height: 200px;
+    background-color: black;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+.btn{
+    background-color: #DAA520;
+}
